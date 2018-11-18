@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDark">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sinopsis"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:layout_marginTop="25dp"
+            android:background="@color/colorBlack"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut sollicitudin sem, id pellentesque dolor. Sed non lobortis enim. Duis lobortis semper nulla at condimentum. Praesent vel malesuada odio. Integer id lacus dapibus, facilisis risus at, ornare lorem. Donec efficitur vestibulum dolor sit amet iaculis. Quisque vitae auctor diam, sit amet ultrices augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas."
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:textColor="@color/colorWhite"
+            android:background="@color/colorPrimary"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

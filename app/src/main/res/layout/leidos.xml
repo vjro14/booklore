@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Leidos">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/colorFondo">
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="195dp"
+                android:background="@drawable/banner"
+                android:paddingTop="15dp"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"/>
+
+            <LinearLayout
+                android:layout_width="314dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_edittext_states"
+                android:gravity="center"
+                android:orientation="horizontal"
+                >
+
+                <RatingBar
+                    android:layout_width="245dp"
+                    android:id="@+id/star"
+                    android:layout_height="wrap_content"
+                    android:numStars="5"
+                    android:rating="3"
+                    android:outlineSpotShadowColor="@color/colorAccent"
+                    android:outlineAmbientShadowColor="@color/colorFondo"/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="25dp">
+
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/user"
+                    android:layout_marginRight="20dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre Usuario"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+
+            <com.jjoe64.graphview.GraphView
+                android:layout_width="match_parent"
+                android:layout_height="200dip"
+                android:id="@+id/graph"
+                android:paddingTop="25dp"/>
+
+
+        </LinearLayout>
+
+
+</ScrollView>
