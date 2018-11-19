@@ -125,7 +125,8 @@
                 android:text="Crear Usuario"
                 android:textColor="@color/colorWhite"
                 android:textStyle="bold"
-                android:onClick="registro"/>
+                android:onClick="registro"
+                />
         </LinearLayout>
 
     </LinearLayout>
