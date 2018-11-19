@@ -3,6 +3,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
+
+    <item android:title="Mi Area">
+        <menu>
+            <item
+                android:id="@+id/area"
+                android:title="Mi area" />
+        </menu>
+    </item>
+
+
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_camera"

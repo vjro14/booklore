@@ -41,11 +41,11 @@ public class CustomListAdapter extends BaseAdapter {
         convertView = LayoutInflater.from(context).inflate(R.layout.mylist,null);
         ImageView imgFoto = convertView.findViewById(R.id.imagen);
         TextView titulo = convertView.findViewById(R.id.Titulo);
-        TextView ranked = convertView.findViewById(R.id.Ranked);
+        TextView id = convertView.findViewById(R.id.identificador);
 
         imgFoto.setImageResource(item.getImagen());
         titulo.setText(item.getTitulo());
-        ranked.setText(item.getRanked());
+        id.setText(item.getId());
         return convertView;
     }
 }

@@ -19,9 +19,17 @@ public class Leidos extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.leidos);
-        GraphView graph = (GraphView) findViewById(R.id.graph);
 
-        RatingBar ratingBar = (RatingBar) findViewById(R.id.star);
+        //Prueba
+            Bundle bundle = getIntent().getExtras();
+            if (bundle != null){
+                String texto = bundle.getString("ID");
+                int a = 1;
+            }
+        //Prueba
+        GraphView graph = findViewById(R.id.graph);
+
+        RatingBar ratingBar = findViewById(R.id.star);
         LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
         stars.getDrawable(2).setColorFilter(Color.CYAN, PorterDuff.Mode.SRC_ATOP);
 
