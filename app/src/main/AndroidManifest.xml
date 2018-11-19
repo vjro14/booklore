@@ -32,7 +32,9 @@
             android:name=".Leidos"
             android:label="Leidos" />
         <activity android:name=".dashboard_tablas" />
-        <activity android:name=".MiArea" android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".MiArea"
+            android:theme="@style/AppTheme" />
     </application>
 
 </manifest>
