@@ -3,74 +3,97 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".Leidos">
+    tools:context=".Leidos"
+    android:background="#334355"
+    android:padding="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:gravity="center"
-            android:background="@color/colorFondo">
+            android:gravity="center">
+
             <ImageView
-                android:layout_width="120dp"
+                android:layout_width="match_parent"
                 android:layout_height="195dp"
                 android:background="@drawable/banner"
-                android:paddingTop="15dp"
                 android:layout_marginBottom="25dp"
-                android:layout_marginTop="25dp"/>
+                android:scaleType="fitXY"/>
 
             <LinearLayout
-                android:layout_width="314dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/rounded_edittext_states"
+                android:background="#76a5af"
                 android:gravity="center"
-                android:orientation="horizontal"
+                android:orientation="vertical"
+                android:padding="10dp"
                 >
 
                 <RatingBar
-                    android:layout_width="245dp"
+                    android:layout_width="wrap_content"
                     android:id="@+id/star"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:numStars="5"
                     android:rating="3"
                     android:outlineSpotShadowColor="@color/colorAccent"
-                    android:outlineAmbientShadowColor="@color/colorFondo"/>
+                    android:outlineAmbientShadowColor="@color/colorFondo"
+                    android:isIndicator="true"
+                    android:paddingTop="20dp"
 
+                    />
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginBottom="25dp"
+                    android:layout_gravity="left">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/user"
+                        android:layout_marginRight="20dp"
+                        android:layout_gravity="left"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MKEF01"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="18sp"/>
+
+                </LinearLayout>
             </LinearLayout>
+
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
-                android:layout_marginTop="25dp"
-                android:layout_marginBottom="25dp">
+                android:orientation="vertical"
+                android:paddingTop="15dp">
 
-                <ImageView
-                    android:layout_width="60dp"
-                    android:layout_height="60dp"
-                    android:src="@drawable/user"
-                    android:layout_marginRight="20dp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nombre Usuario"
-                    android:textColor="@color/colorWhite"
-                    android:textSize="18sp" />
+                <com.jjoe64.graphview.GraphView
+                    android:id="@+id/graph"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dip"
+                    android:paddingTop="25dp" />
 
             </LinearLayout>
 
 
-            <com.jjoe64.graphview.GraphView
-                android:layout_width="match_parent"
-                android:layout_height="200dip"
-                android:id="@+id/graph"
-                android:paddingTop="25dp"/>
-
-
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sinopsis"
+            android:background="@drawable/back"/>
 
+    </LinearLayout>
 
 </ScrollView>

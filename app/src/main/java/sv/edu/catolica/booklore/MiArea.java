@@ -1,5 +1,6 @@
 package sv.edu.catolica.booklore;
 
+import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -65,11 +66,34 @@ public class MiArea extends AppCompatActivity {
         listLeyendo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                /*String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
+                Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();*/
+                Intent inicio = new Intent(MiArea.this,Leidos.class);
+                startActivity(inicio);
+            }
+        });
+
+        listLeidos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
                 Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();
             }
         });
-
+        listPorleer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
+                Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();
+            }
+        });
+        listWishlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
+                Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private ArrayList<DataModel> getarrayitemsLeyendo(){
