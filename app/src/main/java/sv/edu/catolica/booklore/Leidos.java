@@ -6,6 +6,7 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
 import android.widget.RatingBar;
+import android.widget.Toast;
 
 import com.jjoe64.graphview.GraphView;
 import com.jjoe64.graphview.ValueDependentColor;
@@ -15,21 +16,14 @@ import com.jjoe64.graphview.series.DataPoint;
 
 public class Leidos extends Activity {
 
+    RatingBar ratingBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.leidos);
-
-        //Prueba
-            Bundle bundle = getIntent().getExtras();
-            if (bundle != null){
-                String texto = bundle.getString("ID");
-                int a = 1;
-            }
-        //Prueba
         GraphView graph = findViewById(R.id.graph);
 
-        RatingBar ratingBar = findViewById(R.id.star);
+        ratingBar = findViewById(R.id.star);
         LayerDrawable stars = (LayerDrawable) ratingBar.getProgressDrawable();
         stars.getDrawable(2).setColorFilter(Color.CYAN, PorterDuff.Mode.SRC_ATOP);
 
@@ -57,5 +51,15 @@ public class Leidos extends Activity {
         series.setValuesOnTopColor(Color.RED);
 //series.setValuesOnTopSize(50);
 
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float rating, boolean fromUser) {
+                float a = ratingBar.getRating();
+                Toast.makeText(getApplicationContext(),"Su seleccion de "+a,Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
+
+
 }

@@ -35,9 +35,9 @@
                     android:layout_height="match_parent"
                     android:numStars="5"
                     android:rating="3"
+                    android:stepSize="1"
                     android:outlineSpotShadowColor="@color/colorAccent"
                     android:outlineAmbientShadowColor="@color/colorFondo"
-                    android:isIndicator="true"
                     android:paddingTop="20dp"
 
                     />

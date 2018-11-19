@@ -35,6 +35,9 @@
         <activity
             android:name=".MiArea"
             android:theme="@style/AppTheme" />
+        <activity android:name=".Leyendo"
+            android:theme="@style/AppTheme"></activity>
+
     </application>
 
 </manifest>

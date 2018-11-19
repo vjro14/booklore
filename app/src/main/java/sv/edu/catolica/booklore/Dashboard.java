@@ -127,7 +127,7 @@ public class Dashboard extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            System.exit(0);
         }
 
         return super.onOptionsItemSelected(item);
@@ -146,7 +146,8 @@ public class Dashboard extends AppCompatActivity
             Intent inicio = new Intent(this,MiArea.class);
             startActivity(inicio);
         } else if (id == R.id.nav_slideshow) {
-
+            Intent inicio = new Intent(this,Leyendo.class);
+            startActivity(inicio);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
