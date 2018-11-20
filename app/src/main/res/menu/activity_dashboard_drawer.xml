@@ -15,19 +15,19 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/CrearGrupos"
             android:icon="@drawable/ic_assignment"
             android:title="Crear Grupo" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/grupos"
             android:icon="@drawable/ic_date_range"
             android:title="Grupos" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/Librerias"
             android:icon="@drawable/ic_trending_up"
             android:title="Librerias" />
         <item
-            android:id="@+id/nav_manage"
+            android:id="@+id/SalirGrupos"
             android:icon="@drawable/ic_logout"
             android:title="Salir Grupos" />
     </group>
@@ -35,11 +35,11 @@
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/AcercaDe"
                 android:icon="@drawable/ic_menu_manage"
-                android:title="Configuracion" />
+                android:title="Acerca De" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/Salir"
                 android:icon="@drawable/ic_logout"
                 android:title="Salir" />
         </menu>

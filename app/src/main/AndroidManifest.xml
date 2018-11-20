@@ -56,7 +56,7 @@
         <activity
             android:name=".Leyendo"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Grupos" />
+        <activity android:name=".Grupos"  android:theme="@style/AppTheme" />
         <activity android:name=".LibreriaMapa" />
         <activity android:name=".LibreriaWishlist"
             android:label="Wish List"
