@@ -61,6 +61,14 @@
         <activity android:name=".LibreriaWishlist"
             android:label="Wish List"
             android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Grupos"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".InnerGroup"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Comentarios"
+            android:theme="@style/AppTheme"/>
     </application>
 
 </manifest>
