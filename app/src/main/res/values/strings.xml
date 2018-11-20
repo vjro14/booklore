@@ -6,6 +6,9 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="Titulo">Titulo</string>
+    <string name="TituloNo">Error al cargar el libro</string>
+    <string name="DescripcionNo">Se ha producido un error al cargar la informacion del libro solicitado</string>
     <string name="Sinopsis">Sinopsis</string>
     <string name="Frases">Frases</string>
     <string name="example">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ut sollicitudin sem, id pellentesque dolor. Sed non lobortis enim. Duis lobortis semper nulla at condimentum. Praesent vel malesuada odio. Integer id lacus dapibus, facilisis risus at, ornare lorem. Donec efficitur vestibulum dolor sit amet iaculis. Quisque vitae auctor diam, sit amet ultrices augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</string>
@@ -21,4 +24,5 @@
     <string name="title_section3">Section 3</string>
 
     <string name="action_example">Example action</string>
+    <string name="ver_mapa">Ver mapa</string>
 </resources>

@@ -76,8 +76,10 @@ public class MiArea extends AppCompatActivity {
         listWishlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
-                Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();
+                /*String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
+                Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();*/
+                Intent intento = new Intent(MiArea.this,LibreriaWishlist.class);
+                startActivity(intento);
             }
         });
     }
