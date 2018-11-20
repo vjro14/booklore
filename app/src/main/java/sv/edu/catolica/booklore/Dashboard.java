@@ -134,21 +134,22 @@ public class Dashboard extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            Intent inicio = new Intent(Dashboard.this,Leidos.class);
-            startActivity(inicio);
+        if (id == R.id.CrearGrupos) {
+
         } else if (id == R.id.area) {
             Intent inicio = new Intent(this,MiArea.class);
             startActivity(inicio);
-        } else if (id == R.id.nav_slideshow) {
-            Intent inicio = new Intent(this,Leyendo.class);
-            startActivity(inicio);
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.Librerias) {
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.SalirGrupos) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.AcercaDe) {
 
+        } else if (id == R.id.Salir) {
+
+        }else if (id == R.id.grupos) {
+            Intent grupos = new Intent(Dashboard.this,Grupos.class);
+            startActivity(grupos);
         }
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
