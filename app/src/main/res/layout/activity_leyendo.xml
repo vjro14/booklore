@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Leyendo">
+    tools:context=".Leyendo"
+    android:padding="20dp"
+    android:background="#334355">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,8 +26,7 @@
             android:background="#76a5af"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="10dp"
-            >
+            android:padding="10dp">
 
             <ProgressBar
                 android:layout_width="350dp"
@@ -45,7 +45,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="25sp"
-                    android:text="0"/>
+                    android:text="0"
+                    android:inputType="numberDecimal"/>
                 <TextView
                     android:id="@+id/separador"
                     android:layout_width="wrap_content"
@@ -63,7 +64,7 @@
                     android:id="@+id/btnAvanzar"
                     android:layout_width="150dp"
                     android:layout_height="match_parent"
-                    android:text="Avanzar"
+                    android:text="Registrar"
                     android:layout_marginLeft="30dp"/>
             </LinearLayout>
 
@@ -125,18 +126,18 @@
                 android:textColor="@color/colorWhite"
                 android:layout_marginTop="25dp"
                 android:background="@color/colorBlack"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"/>
+                />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/example"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:textColor="@color/colorWhite"
-                android:background="@color/colorPrimary"/>
+                android:background="#76a5af"/>
 
-
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -147,18 +148,38 @@
                 android:textColor="@color/colorWhite"
                 android:layout_marginTop="25dp"
                 android:background="@color/colorBlack"
-                android:layout_marginRight="15dp"
-                android:layout_marginLeft="15dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/example"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
-                android:textColor="@color/colorWhite"
-                android:background="@color/colorPrimary"
                 />
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Frases"
+                    android:nestedScrollingEnabled="true"/>
+        </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Frases"
+                    android:textStyle="bold"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:textColor="@color/colorWhite"
+                    android:layout_marginTop="25dp"
+                    android:background="@color/colorBlack"
+                    />
+
+                <ListView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/Puntuacion"
+                    android:nestedScrollingEnabled="true"/>
+
+            </LinearLayout>
+
         </LinearLayout>
     </LinearLayout>
 

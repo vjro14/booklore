@@ -45,10 +45,7 @@ public class Dashboard extends AppCompatActivity
         spec.setIndicator("Por Leer",res.getDrawable(R.drawable.portada6));
         control.addTab(spec);
 
-        spec = control.newTabSpec("Leidos");
-        spec.setContent(R.id.Porleer);
-        spec.setIndicator("Leidos",res.getDrawable(R.drawable.portada6));
-        control.addTab(spec);
+
 
         spec = control.newTabSpec("Whishlist");
         spec.setContent(R.id.Whishlist);
@@ -69,9 +66,7 @@ public class Dashboard extends AppCompatActivity
         adapter = new CustomListAdapter(this,getarrayitems());
         listView.setAdapter(adapter);
 
-        listView = findViewById(R.id.listapublica3);
-        adapter = new CustomListAdapter(this,getarrayitems());
-        listView.setAdapter(adapter);
+
 
         listView = findViewById(R.id.listapublica4);
         adapter = new CustomListAdapter(this,getarrayitems());

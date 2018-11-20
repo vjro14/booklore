@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.LayerDrawable;
 import android.os.Bundle;
+import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.Toast;
 
@@ -13,10 +14,16 @@ import com.jjoe64.graphview.ValueDependentColor;
 import com.jjoe64.graphview.series.BarGraphSeries;
 import com.jjoe64.graphview.series.DataPoint;
 
+import java.util.ArrayList;
+
 
 public class Leidos extends Activity {
 
     RatingBar ratingBar;
+    private ListView listafrases,listapuntuacion;
+    private CustomListAdapterFrases adapter;
+    private CustomListAdapterPuntuacones adapter2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,11 +35,11 @@ public class Leidos extends Activity {
         stars.getDrawable(2).setColorFilter(Color.CYAN, PorterDuff.Mode.SRC_ATOP);
 
         BarGraphSeries<DataPoint> series = new BarGraphSeries<>(new DataPoint[] {
-                new DataPoint(0, -1),
-                new DataPoint(1, 5),
-                new DataPoint(2, 3),
-                new DataPoint(3, 2),
-                new DataPoint(4, 6)
+                new DataPoint(1, 10),
+                new DataPoint(2, 5),
+                new DataPoint(3, 1),
+                new DataPoint(4, 25),
+                new DataPoint(5, 50)
         });
         graph.addSeries(series);
 
@@ -59,6 +66,36 @@ public class Leidos extends Activity {
             }
         });
 
+        listafrases = findViewById(R.id.Frases);
+        adapter = new CustomListAdapterFrases(this,getarrayitemsPorleer());
+        listafrases.setAdapter(adapter);
+
+        listapuntuacion = findViewById(R.id.Puntuacion);
+        adapter2 = new CustomListAdapterPuntuacones(this,getarrayitemsPuntuaciones());
+        listapuntuacion.setAdapter(adapter2);
+
+    }
+
+    private ArrayList<DataModelFrases> getarrayitemsPorleer(){
+        ArrayList<DataModelFrases> listItems = new ArrayList<>();
+        listItems.add(new DataModelFrases("En la vida hay cuatro constantes: la vida, la muerte, el proposito y el azar","Elmer Figueroa"));
+        listItems.add(new DataModelFrases("En la vida hay cuatro constantes: la vida, la muerte, el proposito y el azar","Elmer Figueroa"));
+        listItems.add(new DataModelFrases("En la vida hay cuatro constantes: la vida, la muerte, el proposito y el azar","Elmer Figueroa"));
+        listItems.add(new DataModelFrases("En la vida hay cuatro constantes: la vida, la muerte, el proposito y el azar","Elmer Figueroa"));
+
+        return listItems;
+    }
+
+    private ArrayList<DataModelPuntuaciones> getarrayitemsPuntuaciones(){
+        ArrayList<DataModelPuntuaciones> listItems = new ArrayList<>();
+        listItems.add(new DataModelPuntuaciones(Float.parseFloat("5.0"),"Elmer Figueroa"));
+        listItems.add(new DataModelPuntuaciones(Float.parseFloat("1.0"),"Elmer Figueroa"));
+        listItems.add(new DataModelPuntuaciones(Float.parseFloat("3.0"),"Elmer Figueroa"));
+        listItems.add(new DataModelPuntuaciones(Float.parseFloat("4.0"),"Elmer Figueroa"));
+        listItems.add(new DataModelPuntuaciones(Float.parseFloat("5" +
+                ".0"),"Elmer Figueroa"));
+
+        return listItems;
     }
 
 

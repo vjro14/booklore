@@ -31,10 +31,6 @@ public class MiArea extends AppCompatActivity {
         spec.setIndicator("Leyendo",res.getDrawable(R.drawable.portada6));
         control.addTab(spec);
 
-        spec = control.newTabSpec("Porleer");
-        spec.setContent(R.id.porleer);
-        spec.setIndicator("Por Leer",res.getDrawable(R.drawable.portada6));
-        control.addTab(spec);
 
         spec = control.newTabSpec("Leidos");
         spec.setContent(R.id.leidos);
@@ -54,9 +50,6 @@ public class MiArea extends AppCompatActivity {
         adapter = new CustomListAdapter(this,getarrayitemsLeidos());
         listLeidos.setAdapter(adapter);
 
-        listPorleer = findViewById(R.id.listaporleer);
-        adapter = new CustomListAdapter(this,getarrayitemsPorleer());
-        listPorleer.setAdapter(adapter);
 
         listWishlist = findViewById(R.id.listawhishlist);
         adapter = new CustomListAdapter(this,getarrayitemsWhishlist());
@@ -68,7 +61,7 @@ public class MiArea extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 /*String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
                 Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();*/
-                Intent inicio = new Intent(MiArea.this,Leidos.class);
+                Intent inicio = new Intent(MiArea.this,Leyendo.class);
                 startActivity(inicio);
             }
         });
@@ -76,15 +69,8 @@ public class MiArea extends AppCompatActivity {
         listLeidos.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
-                Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();
-            }
-        });
-        listPorleer.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
-                Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();
+                Intent inicio = new Intent(MiArea.this,Leidos.class);
+                startActivity(inicio);
             }
         });
         listWishlist.setOnItemClickListener(new AdapterView.OnItemClickListener() {

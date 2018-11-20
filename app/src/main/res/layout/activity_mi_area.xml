@@ -56,17 +56,6 @@
             </LinearLayout>
 
             <!---Por Leer**********************************-->
-            <LinearLayout
-                android:id="@+id/porleer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="10dp">
-                        <ListView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:id="@+id/listaporleer" />
-            </LinearLayout>
 
             <!---Whishlist**********************************-->
             <LinearLayout

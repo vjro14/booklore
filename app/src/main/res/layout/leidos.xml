@@ -34,7 +34,7 @@
                     android:id="@+id/star"
                     android:layout_height="match_parent"
                     android:numStars="5"
-                    android:rating="3"
+                    android:rating="4"
                     android:stepSize="1"
                     android:outlineSpotShadowColor="@color/colorAccent"
                     android:outlineAmbientShadowColor="@color/colorFondo"
@@ -99,42 +99,60 @@
                     android:gravity="center"
                     android:textColor="@color/colorWhite"
                     android:layout_marginTop="25dp"
-                    android:background="@color/colorBlack"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"/>
+                    android:background="@color/colorBlack" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/example"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorPrimary"/>
+                    android:background="#76a5af"/>
 
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Frases"
-                    android:textStyle="bold"
-                    android:textSize="25sp"
-                    android:gravity="center"
-                    android:textColor="@color/colorWhite"
-                    android:layout_marginTop="25dp"
-                    android:background="@color/colorBlack"
-                    android:layout_marginRight="15dp"
-                    android:layout_marginLeft="15dp"/>
+                    android:layout_height="400dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Frases"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginTop="25dp"
+                        android:background="@color/colorBlack"
+                        />
 
-                <TextView
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/Frases"
+                        android:nestedScrollingEnabled="true"/>
+
+                </LinearLayout>
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/example"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorPrimary"
-                    />
+                    android:layout_height="400dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Frases"
+                        android:textStyle="bold"
+                        android:textSize="25sp"
+                        android:gravity="center"
+                        android:textColor="@color/colorWhite"
+                        android:layout_marginTop="25dp"
+                        android:background="@color/colorBlack"
+                        />
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/Puntuacion"
+                        android:nestedScrollingEnabled="true"/>
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    <!--Paniagua aqui CTM-->
 </ScrollView>

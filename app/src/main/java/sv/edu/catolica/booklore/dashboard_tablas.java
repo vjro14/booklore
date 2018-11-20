@@ -1,8 +1,8 @@
 package sv.edu.catolica.booklore;
 
 import android.content.res.Resources;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 import android.widget.TabHost;
 
@@ -36,10 +36,7 @@ public class dashboard_tablas extends AppCompatActivity {
         spec.setIndicator("Por Leer",res.getDrawable(R.drawable.portada6));
         control.addTab(spec);
 
-        spec = control.newTabSpec("Leidos");
-        spec.setContent(R.id.Porleer);
-        spec.setIndicator("Leidos",res.getDrawable(R.drawable.portada6));
-        control.addTab(spec);
+
 
         spec = control.newTabSpec("Whishlist");
         spec.setContent(R.id.Whishlist);
@@ -60,9 +57,7 @@ public class dashboard_tablas extends AppCompatActivity {
         adapter = new CustomListAdapter(this,getarrayitems());
         listView.setAdapter(adapter);
 
-        listView = findViewById(R.id.listapublica3);
-        adapter = new CustomListAdapter(this,getarrayitems());
-        listView.setAdapter(adapter);
+
 
         listView = findViewById(R.id.listapublica4);
         adapter = new CustomListAdapter(this,getarrayitems());
