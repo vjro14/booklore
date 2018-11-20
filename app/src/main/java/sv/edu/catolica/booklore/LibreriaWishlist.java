@@ -23,6 +23,10 @@ public class LibreriaWishlist extends AppCompatActivity {
         tvDesc=findViewById(R.id.tvDescripcion);
         ivPort=findViewById(R.id.ivPortada);
 
+        port="";
+        tit="";
+        desc="";
+
         if(port.equals("") || tit.equals("") || desc.equals("")){
             tvTit.setText(R.string.TituloNo);
             tvDesc.setText(R.string.DescripcionNo);
