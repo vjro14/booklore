@@ -5,11 +5,7 @@
 
 
     <item android:title="Mi Area">
-        <menu>
-            <item
-                android:id="@+id/area"
-                android:title="Mi area" />
-        </menu>
+
     </item>
 
 
@@ -36,7 +32,7 @@
         <menu>
             <item
                 android:id="@+id/AcercaDe"
-                android:icon="@drawable/ic_menu_manage"
+                android:icon="@drawable/ic_help"
                 android:title="Acerca De" />
             <item
                 android:id="@+id/Salir"
