@@ -56,6 +56,19 @@
         <activity
             android:name=".Leyendo"
             android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Librerias"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".Reservas"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Cotizaciones"
+            android:theme="@style/AppTheme">
+
+        </activity>
+        <activity
+            android:name=".Leyendo"
+            android:theme="@style/AppTheme" />
         <activity android:name=".Grupos"  android:theme="@style/AppTheme" />
         <activity android:name=".LibreriaMapa" />
         <activity android:name=".LibreriaWishlist"
