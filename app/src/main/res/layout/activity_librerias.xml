@@ -39,23 +39,27 @@
 
 
         <Button
+            android:id="@+id/btnreservas"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Reservas"
-            android:layout_marginRight="20dp"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="20dp"
             android:background="@color/colorDark"
-            android:textColor="@color/colorWhite"
-            android:layout_marginTop="25dp"/>
+            android:onClick="reserva"
+            android:text="Reservas"
+            android:textColor="@color/colorWhite" />
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cotizaciones"
             android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:background="@color/colorDark"
-            android:textColor="@color/colorWhite"
-            android:layout_marginTop="20dp"/>
+            android:onClick="cotizaciones"
+            android:text="Cotizaciones"
+            android:textColor="@color/colorWhite" />
 
 
     </LinearLayout>

@@ -28,4 +28,6 @@
     <string name="Cotizaciones">Cotizaciones de Libros</string>
     <string name="Precio">Precio</string>
     <string name="ver_mapa">Ver mapa</string>
+    <string name="Nombre">Nombre</string>
+    <string name="Cantidad">Cantidad</string>
 </resources>
