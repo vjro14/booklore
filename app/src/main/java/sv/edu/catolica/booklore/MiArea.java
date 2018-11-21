@@ -2,6 +2,7 @@ package sv.edu.catolica.booklore;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -11,10 +12,14 @@ import android.widget.TabHost;
 
 import java.util.ArrayList;
 
+import sv.edu.catolica.booklore.SQLite.Crud;
+
 public class MiArea extends AppCompatActivity {
 
     private ListView listLeyendo,listLeidos,listPorleer,listWishlist;
-    private CustomListAdapter adapter;
+    private CustomListAdapterPublicos adapter;
+    Crud crud;
+    String idli,nombre,portada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,12 +28,17 @@ public class MiArea extends AppCompatActivity {
         Resources res = getResources();
         TabHost control = findViewById(R.id.tabhost);
         control.setup();
-
+        crud=new Crud(MiArea.this);
+        idli="";
+        nombre="";
+        portada="";
         TabHost.TabSpec spec = control.newTabSpec("Leyendo");
         spec.setContent(R.id.leyendo);
         spec.setIndicator("Leyendo",res.getDrawable(R.drawable.portada6));
         control.addTab(spec);
-
+        //String [] val={"portada"};
+        //String [] para={"https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"};
+        //crud.Insert("libro",val,para);
 
         spec = control.newTabSpec("Leidos");
         spec.setContent(R.id.leidos);
@@ -41,16 +51,16 @@ public class MiArea extends AppCompatActivity {
         control.addTab(spec);
 
         listLeyendo = findViewById(R.id.listaleyendo);
-        adapter = new CustomListAdapter(this,getarrayitemsLeyendo());
+        adapter = new CustomListAdapterPublicos(this,getarrayitemsLeyendo());
         listLeyendo.setAdapter(adapter);
 
         listLeidos = findViewById(R.id.listaliedos);
-        adapter = new CustomListAdapter(this,getarrayitemsLeidos());
+        adapter = new CustomListAdapterPublicos(this,getarrayitemsLeidos());
         listLeidos.setAdapter(adapter);
 
 
         listWishlist = findViewById(R.id.listawhishlist);
-        adapter = new CustomListAdapter(this,getarrayitemsWhishlist());
+        adapter = new CustomListAdapterPublicos(this,getarrayitemsWhishlist());
         listWishlist.setAdapter(adapter);
 
 
@@ -80,31 +90,41 @@ public class MiArea extends AppCompatActivity {
         });
     }
 
-    private ArrayList<DataModel> getarrayitemsLeyendo(){
-        ArrayList<DataModel> listItems = new ArrayList<>();
-        listItems.add(new DataModel("La torre oscura","1",R.drawable.portada1));
+
+    private ArrayList<DataModelListaPublicos> getarrayitemsLeyendo(){
+        ArrayList<DataModelListaPublicos> listItems = new ArrayList<>();
+        Cursor userbd = crud.Select("libro","");
+
+        if(userbd.moveToFirst()){
+            portada=userbd.getString(userbd.getColumnIndex("portada"));
+
+            listItems.add(new DataModelListaPublicos(portada));
+
+        }
 
         return listItems;
     }
-    private ArrayList<DataModel> getarrayitemsLeidos(){
-        ArrayList<DataModel> listItems = new ArrayList<>();
-        listItems.add(new DataModel("Lobos del calla","3",R.drawable.portada3));
-        listItems.add(new DataModel("Hechicero","4",R.drawable.portada6));
+    private ArrayList<DataModelListaPublicos> getarrayitemsLeidos(){
+        ArrayList<DataModelListaPublicos> listItems = new ArrayList<>();
+        listItems.add(new DataModelListaPublicos("https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"));
+        listItems.add(new DataModelListaPublicos("https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"));
+        listItems.add(new DataModelListaPublicos("https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"));
 
         return listItems;
     }
-    private ArrayList<DataModel> getarrayitemsPorleer(){
-        ArrayList<DataModel> listItems = new ArrayList<>();
-        listItems.add(new DataModel("Hechicero","4",R.drawable.portada6));
+    private ArrayList<DataModelListaPublicos> getarrayitemsPorleer(){
+        ArrayList<DataModelListaPublicos> listItems = new ArrayList<>();
+        listItems.add(new DataModelListaPublicos("https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"));
+        listItems.add(new DataModelListaPublicos("https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"));
+        listItems.add(new DataModelListaPublicos("https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"));
 
         return listItems;
     }
-    private ArrayList<DataModel> getarrayitemsWhishlist(){
-        ArrayList<DataModel> listItems = new ArrayList<>();
-        listItems.add(new DataModel("La torre oscura","1",R.drawable.portada1));
-        listItems.add(new DataModel("Mago y Cristal","2",R.drawable.portada2));
-        listItems.add(new DataModel("Lobos del calla","3",R.drawable.portada3));
-        listItems.add(new DataModel("Hechicero","4",R.drawable.portada6));
+    private ArrayList<DataModelListaPublicos> getarrayitemsWhishlist(){
+        ArrayList<DataModelListaPublicos> listItems = new ArrayList<>();
+        listItems.add(new DataModelListaPublicos("https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"));
+        listItems.add(new DataModelListaPublicos("https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"));
+        listItems.add(new DataModelListaPublicos("https://10images.cgames.de/images/gamestar/226/fallout-76-artwork-render_6034929.jpg"));
 
         return listItems;
     }
