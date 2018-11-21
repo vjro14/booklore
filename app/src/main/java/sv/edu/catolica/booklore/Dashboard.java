@@ -140,13 +140,15 @@ public class Dashboard extends AppCompatActivity
             Intent inicio = new Intent(this,MiArea.class);
             startActivity(inicio);
         } else if (id == R.id.Librerias) {
-
+            Intent inicio = new Intent(this,Librerias.class);
+            startActivity(inicio);
         } else if (id == R.id.SalirGrupos) {
 
         } else if (id == R.id.AcercaDe) {
-
+            Intent inicio = new Intent(this,Informacion.class);
+            startActivity(inicio);
         } else if (id == R.id.Salir) {
-
+            System.exit(0);
         }else if (id == R.id.grupos) {
             Intent grupos = new Intent(Dashboard.this,Grupos.class);
             startActivity(grupos);

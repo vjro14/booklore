@@ -62,26 +62,24 @@
         <activity
             android:name=".Reservas"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Cotizaciones"
-            android:theme="@style/AppTheme">
-
-        </activity>
         <activity
-            android:name=".Leyendo"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".Grupos"  android:theme="@style/AppTheme" />
-        <activity android:name=".LibreriaMapa" />
-        <activity android:name=".LibreriaWishlist"
-            android:label="Wish List"
-            android:theme="@style/AppTheme"/>
+            android:name=".Cotizaciones"
+            android:theme="@style/AppTheme"></activity>
         <activity
             android:name=".Grupos"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".LibreriaMapa" />
+        <activity
+            android:name=".LibreriaWishlist"
+            android:label="Wish List"
             android:theme="@style/AppTheme" />
         <activity
             android:name=".InnerGroup"
             android:theme="@style/AppTheme" />
-        <activity android:name=".Comentarios"
-            android:theme="@style/AppTheme"/>
+        <activity
+            android:name=".Comentarios"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Informacion"  android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

@@ -5,7 +5,11 @@
 
 
     <item android:title="Mi Area">
-
+        <menu>
+            <item
+                android:id="@+id/area"
+                android:title="Mi area" />
+        </menu>
     </item>
 
 

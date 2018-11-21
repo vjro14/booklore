@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TabHost;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -59,8 +57,6 @@ public class MiArea extends AppCompatActivity {
         listLeyendo.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                /*String selected = ((TextView) view.findViewById(R.id.identificador)).getText().toString();
-                Toast.makeText(getApplicationContext(),selected,Toast.LENGTH_LONG).show();*/
                 Intent inicio = new Intent(MiArea.this,Leyendo.class);
                 startActivity(inicio);
             }

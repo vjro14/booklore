@@ -77,7 +77,8 @@
                     <Button
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Mkef01"/>
+                        android:text="Buscar"
+                        android:onClick="btnBuscar"/>
 
                 </LinearLayout>
 
@@ -85,7 +86,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:id="@+id/listabuscar"
-                    />
+                    android:visibility="invisible"/>
 
             </LinearLayout>
 
