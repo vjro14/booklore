@@ -25,8 +25,6 @@ public class Login extends Activity {
     }
 
     public void IniciarSesion(View v){
-        Intent inicio = new Intent(Login.this,Dashboard.class);
-        startActivity(inicio);
 
         String usuario = etUsuario.getText().toString();
         String clave = etClave.getText().toString();
@@ -55,7 +53,7 @@ public class Login extends Activity {
                         etUsuario.setText("");
                         etClave.setText("");
 
-                         Intent inicio2 = new Intent(Login.this,Dashboard.class);
+                         Intent inicio = new Intent(Login.this,Dashboard.class);
                         startActivity(inicio);
                     } else {
                         Toast.makeText(this,"Contraseña incorrecta",Toast.LENGTH_SHORT).show();
