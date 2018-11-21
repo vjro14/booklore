@@ -9,11 +9,14 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import sv.edu.catolica.booklore.SQLite.Crud;
+import sv.edu.catolica.booklore.SQLite.Sesiones;
 
 
 public class Login extends Activity {
 
     EditText etUsuario, etClave;
+    private Sesiones sessiones;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +25,12 @@ public class Login extends Activity {
 
         etUsuario = findViewById(R.id.tvuser);
         etClave = findViewById(R.id.tvpass);
+        sessiones = new Sesiones(getApplicationContext());
+
+        if(!sessiones.getUserName().isEmpty() && !sessiones.getPassword().isEmpty()){
+            Intent inicio = new Intent(Login.this,Dashboard.class);
+            startActivity(inicio);
+        }
     }
 
     public void IniciarSesion(View v){
@@ -53,6 +62,8 @@ public class Login extends Activity {
                         etUsuario.setText("");
                         etClave.setText("");
 
+                        sessiones.setPassword(claveReal);
+                        sessiones.setUserName(usuario);
                          Intent inicio = new Intent(Login.this,Dashboard.class);
                         startActivity(inicio);
                     } else {

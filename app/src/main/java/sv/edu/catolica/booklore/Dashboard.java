@@ -16,16 +16,27 @@ import android.widget.TabHost;
 
 import java.util.ArrayList;
 
+import sv.edu.catolica.booklore.SQLite.Sesiones;
+
 public class Dashboard extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private ListView listView;
     private CustomListAdapter adapter;
+    private Sesiones session;
+    private String nombre_usuario;
+    private String password;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+
+        session = new Sesiones(getApplicationContext());
+        nombre_usuario = session.getUserName();
+        password = session.getPassword();
+
         Resources res = getResources();
         TabHost control = findViewById(R.id.tabhost);
         control.setup();
