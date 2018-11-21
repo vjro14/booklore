@@ -146,7 +146,8 @@ public class Dashboard extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.CrearGrupos) {
-
+            Intent inicio = new Intent(this,CrearGrupo.class);
+            startActivity(inicio);
         } else if (id == R.id.area) {
             Intent inicio = new Intent(this,MiArea.class);
             startActivity(inicio);
